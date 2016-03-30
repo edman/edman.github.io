@@ -3,9 +3,10 @@ permalink:           pretty
 
 # Setup
 title:               Edman P. Anjos
-tagline:             The Jekyll Butler
-url:                 http://getpoole.com
+tagline:             Virtual delusions of a young man
+url:                 http://edman.github.io/
 paginate:            1
+# baseurl:             "http://edman.github.io/"
 baseurl:             ""
 
 # Assets
@@ -22,9 +23,9 @@ author:
   email:             edmanjos@gmail.com
 
 # Custom vars
-version:             2.0.0
+version:             0.0.1
 github:
-  repo:              https://github.com/poole/poole
+  repo:              https://github.com/edman/edman.github.io
 
 # Gems
 gems:
@@ -32,8 +33,10 @@ gems:
   - jekyll-gist
 
 pages_list:
-  - About: '/about'
-  - Archive: '/archive'
-  - Feed: '/atom.xml'
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
 
 highlight: pygments
+
+permalink: '/:title'
