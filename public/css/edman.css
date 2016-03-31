@@ -36,3 +36,7 @@ div.font-small a {
   font-size: 0.6rem;
 }
 
+hr.excerpt-divider {
+  border-top: 2px solid #eee;
+}
+

@@ -12,8 +12,15 @@ title: Home
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
     <!-- {{ post.content }} -->
+    <!-- display a short post excerpt along with a 'read more' button -->
     {{ post.excerpt }}
-    <p><a href="{{ post.url }}">Read more</a></p>
+    <p><a href="{{ post.url }}"> Read more </a></p>
+
+    <!-- horizontal separator between post excerpts -->
+    {% if forloop.last == false %}
+    <hr class="excerpt-divider"></hr>
+    {% endif %}
+
   </div>
   {% endfor %}
 </div>
