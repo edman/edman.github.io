@@ -1,5 +1,6 @@
 # Setup
-title: Edman P. Anjos
+title: Edman Anjos
+# title: Edman P. Anjos
 tagline: 'Virtual delusions of a young programmer'
 description: 'Virtual delusions of a young programmer'
 url: http://edman.github.io/
@@ -23,6 +24,10 @@ permalink: '/:title'
 
 # number of posts to be showed on the front page
 paginate: 2
+# format of pagination pages
+paginate_path: 'page/:num'
+# 'read more' delimiter
+excerpt_separator: '<span class="more"/>'
 
 # Gems
 gems:
