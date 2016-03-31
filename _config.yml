@@ -1,43 +1,41 @@
-# Permalinks
-# permalink:           pretty
-permalink: '/:title'
-
 # Setup
-title:               Edman P. Anjos
-tagline:             Virtual delusions of a young man
-url:                 http://edman.github.io/
-paginate:            2
-# baseurl:             "http://edman.github.io/"
-baseurl:             ""
+title:            Edman P. Anjos
+tagline:          'Virtual delusions of a young programmer'
+description:      'Virtual delusions of a young programmer'
+url:              http://edman.github.io/
+baseurl:          /
 
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
-
-# About/contact
 author:
-  name:              Edman Paes dos Anjos
-  url:               https://twitter.com/mdo
-  email:             edmanjos@gmail.com
+  name:           'Edman Paes dos Anjos'
+  email:          'edmanjos@gmail.com'
+  url:            http://edman.github.io/
+
+author_email:     'edmanjos@gmail.com'
 
 # Custom vars
-version:             0.0.1
+version:          0.0.1
+
 github:
-  repo:              https://github.com/edman/edman.github.io
+  repo:           https://github.com/edman/edman.github.io
+
+github_username: 'edman'
+facebook_username: 'edman.anjos'
+
+# Dependencies
+# markdown:         redcarpet
+
+highlighter:      pygments
+
+# Permalinks
+permalink:        '/:title'
+# relative_permalinks: true
+
+# number of posts to be showed on the front page
+paginate:         2
+
 
 # Gems
 gems:
   - jekyll-paginate
   - jekyll-gist
-
-pages_list:
-  About: '/about'
-  Articles: '/articles'
-  Feed: '/atom.xml'
-
-# Use pygments for highlighting code snippets
-highlight: pygments
 

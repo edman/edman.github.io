@@ -1,0 +1,20 @@
+img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+div.sidebar-social ul {
+  list-style-type: none;
+  padding-left: 1rem; /* same padding as the navigation bar */
+}
+
+div.sidebar-social ul li a:hover,
+div.sidebar-social ul li a:focus {
+  text-decoration: underline;
+  color: rgba(255,255,255,0.2);
+}
+
