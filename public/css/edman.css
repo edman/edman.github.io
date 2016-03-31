@@ -36,6 +36,12 @@ div.font-small a {
   font-size: 0.6rem;
 }
 
+.caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
 hr.excerpt-divider {
   border-top: 2px solid #eee;
 }
