@@ -1,7 +1,7 @@
 <div class="sidebar">
   <!-- Up here things stick to the top of the sidebar -->
     <div class="sidebar-photo">
-      <img class="img-circle" src="{{ site.url }}assets/photo.jpg"/ alt="Edman's photo">
+      <img class="img-circle centralized" src="{{ site.url }}assets/photo.jpg"/ alt="Edman's photo">
     </div>
     <div class="sidebar-about">
       <h1>
@@ -44,11 +44,16 @@
           {% endif %}
         {% endif %}
       {% endfor %}
-
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-      <span class="sidebar-nav-item">v{{ site.version }}</span>
     </nav>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <footer>
+    <div class="font-small">
+      <a class="font-small" href="http://github.com/{{ site.github_username }}/{{ site.github_repo }}">
+        Hosted on
+        <img src="{{ site.url }}assets/github-logo.png" height=18 width=60 alt="GitHub • Social coding"/>
+      </a>
+    </div>
+    <div class="font-minimum">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</div>
+    </footer>
   </div>
 </div>

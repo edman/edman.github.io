@@ -10,14 +10,9 @@ author:
   email: 'edmanjos@gmail.com'
   url: http://edman.github.io/
 
-# Custom vars
-version: 0.0.1
-
-github:
-  repo: https://github.com/edman/edman.github.io
-
 # Social links
 github_username: 'edman'
+github_repo: 'edman.github.io'
 facebook_username: 'edman.anjos'
 
 # Dependencies

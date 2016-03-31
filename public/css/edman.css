@@ -1,4 +1,5 @@
-img {
+p img,
+img.centralized {
   margin-left: auto;
   margin-right: auto;
 }
@@ -16,5 +17,22 @@ div.sidebar-social ul li a:hover,
 div.sidebar-social ul li a:focus {
   text-decoration: underline;
   color: rgba(255,255,255,0.2);
+}
+
+footer img {
+  display: inline-block;
+  margin: 0;
+}
+
+div.font-small a {
+  color: rgba(255,255,255,0.5);
+}
+
+.font-small {
+  font-size: 0.7rem;
+}
+
+.font-minimum {
+  font-size: 0.6rem;
 }
 
