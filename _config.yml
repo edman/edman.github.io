@@ -1,38 +1,33 @@
 # Setup
-title:            Edman P. Anjos
-tagline:          'Virtual delusions of a young programmer'
-description:      'Virtual delusions of a young programmer'
-url:              http://edman.github.io/
-baseurl:          /
+title: Edman P. Anjos
+tagline: 'Virtual delusions of a young programmer'
+description: 'Virtual delusions of a young programmer'
+url: http://edman.github.io/
+baseurl: /
 
 author:
-  name:           'Edman Paes dos Anjos'
-  email:          'edmanjos@gmail.com'
-  url:            http://edman.github.io/
-
-author_email:     'edmanjos@gmail.com'
+  name: 'Edman Paes dos Anjos'
+  email: 'edmanjos@gmail.com'
+  url: http://edman.github.io/
 
 # Custom vars
-version:          0.0.1
+version: 0.0.1
 
 github:
-  repo:           https://github.com/edman/edman.github.io
+  repo: https://github.com/edman/edman.github.io
 
+# Social links
 github_username: 'edman'
 facebook_username: 'edman.anjos'
 
 # Dependencies
-# markdown:         redcarpet
-
-highlighter:      pygments
+# highlighter: pygments  # github does not support pygments
 
 # Permalinks
-permalink:        '/:title'
-# relative_permalinks: true
+permalink: '/:title'
 
 # number of posts to be showed on the front page
-paginate:         2
-
+paginate: 2
 
 # Gems
 gems:
