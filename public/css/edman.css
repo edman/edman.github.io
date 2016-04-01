@@ -1,3 +1,10 @@
+
+h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 2.50rem;
+  text-align: center;
+}
+
 p img,
 img.centralized {
   margin-left: auto;
@@ -8,15 +15,26 @@ img.centralized {
   border-radius: 50%;
 }
 
-div.sidebar-social ul {
-  list-style-type: none;
-  padding-left: 1rem; /* same padding as the navigation bar */
+.sidebar-social {
+  text-align: left;
+  display: inline-block;
 }
 
-div.sidebar-social ul li a:hover,
-div.sidebar-social ul li a:focus {
+.sidebar-social ul {
+  list-style-type: none;
+  padding-left: 1rem;  /* same padding as the navigation bar */
+}
+
+.sidebar-social ul li a:hover,
+.sidebar-social ul li a:focus {
   text-decoration: underline;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8);
+}
+
+@media (min-width: 44em) {
+  footer {
+    text-align: right;
+  }
 }
 
 footer img {
