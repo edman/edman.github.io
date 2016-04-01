@@ -15,7 +15,7 @@ research focuses on applications and implementation of *succinct data
 structures*, such as on the succinct representation of Json documents.
 
 ![About SK Planet](/assets/about-sk.jpg)
-<p class="caption">Probably my favorite place in SK Planet. Late night pool,
+<p class="caption">Probably my favorite place in SK Planet. After work pool,
 anyone?</p>
 
 In early 2015 I was a backend engineering intern at [SK
@@ -29,7 +29,7 @@ with a small participation client-side by extending support for product
 management with `html5`, `css3` and `AngularJS`.
 
 ![About UFS](/assets/about-ufs.jpg)
-<p class="caption">Last one to leave the parking lot, that's how hard I rolled </p>
+<p class="caption">Last one out turn off the lights</p>
 
 Before starting my master's degree I was an undergraduate student at [Federal
 University of Sergipe](http://www.ufs.br) (UFS) back in Brazil. My
@@ -55,13 +55,16 @@ time in SBU I was granted the *Outstanding Academic Achievement Award* for
 attaining a perfect 4.0 GPA on the spring semester of 2012.
 
 ![About something else](/assets/about-others.jpg)
-<p class="caption"></p>
+<p class="caption">Proud finisher of a half marathon</p>
 
 Besides computers I am interested in photography and sports. I ran a
 half-marathon on fall 2015 and intend to complete a full marathon in the next
-year or so. I am fluent in English, native in Portuguese, and can speak Korean
-well enough for casual settings.
+year or so. I am a fluent English speaker, native in Portuguese, and can speak
+Korean well enough for casual settings.
 
 Thanks for reading. If you like my website, make sure to get in contact for
-comments or suggestions.
+comments or suggestions. Find me on [github](http://github.com/edman),
+[facebook](http://facebook.com/edman.anjos),
+[instagram](http://instagram.com/edman.anjos) or by <a
+href="mailto:edmanjos@gmail.com">email</a>.
 
