@@ -4,6 +4,10 @@ title: About
 permalink: '/about'
 ---
 
+> It's in the doing that our being arises. Intact, ready to go, energized by
+> the spirit of risk. Succed or fail doesn't matter. Just do. Then rejoice in
+> the doing.
+
 ![About me](/assets/about-me.jpg)
 <p class="caption">Beach trip, a day before my yearly winter swim</p>
 
@@ -25,26 +29,28 @@ Order](https://play.google.com/store/apps/details?id=com.skplanet.mbuzzer)
 using `node.js`. The service was quite new back then, so it was an exciting
 time to board the team. My role in development mainly revolved around
 optimization and improvements in service reliability, although I did contribute
-with a small participation client-side by extending support for product
-management with `html5`, `css3` and `AngularJS`.
+with a participation client-side by extending support for product management
+with `html5`, `css3` and `AngularJS`.
 
 ![About UFS](/assets/about-ufs.jpg)
 <p class="caption">Last one out turn off the lights</p>
 
 Before starting my master's degree I was an undergraduate student at [Federal
-University of Sergipe](http://www.ufs.br) (UFS) back in Brazil. My
-undergraduate thesis was on the intersection of programming languages and
-formal languages, where I implemented the *formaly sound*
-[RePeg](https://github.com/edman/repeg) library for regular expression pattern
-matching in `Lua`. This library set itself apart by converting regular
-expressions to parsing expression grammars, which provides a more concise
-formal computational model.
+University of Sergipe](http://www.ufs.br) (UFS) back in Brazil. I wrote my
+undergraduate thesis under the supervision of professor [S.Q.
+Medeiros](https://scholar.google.com/citations?user=BIuLyXYAAAAJ) on the
+intersection of programming languages and formal languages, where I implemented
+the *formaly sound* [RePeg](https://github.com/edman/repeg) library for regular
+expression pattern matching in `Lua`. This library sets itself apart by
+converting regular expressions to parsing expression grammars, which provide a
+more concise formal computational model.
 
 During my undergrad I spent a winter vacation at the [Brazilian Institute for
 Space Research](http://www.inpe.br/ingles/). The program included a range of
 interdisciplinary courses on space technologies along with a practical project,
-on which my team was responsible for designing and implementing the battery
-management system of a satellite.
+on which we designed and implemented the battery management system of a
+satellite under the supervision of doctor [W.A.
+Santos](https://br.linkedin.com/in/walterabrahao).
 
 ![About SBU](/assets/about-sbu.jpg)
 <p class="caption">Just Wolfie chilling by the school fountain, no big deal</p>
