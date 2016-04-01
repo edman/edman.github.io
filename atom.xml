@@ -25,4 +25,16 @@ layout: null
  </entry>
  {% endfor %}
 
+ {% for page in site.pages %}
+ {% if page.layout == "page" %}
+ <entry>
+   <title>{{ page.title }}</title>
+   <link href="{{ site.url }}{{ page.url }}"/>
+   <updated>{{ site.time | date_to_xmlschema }}</updated>
+   <id>{{ page.url }}{{ page.id }}</id>
+   <content type="html">{{ page.content | xml_escape }}</content>
+ </entry>
+ {% endif %}
+ {% endfor %}
+
 </feed>
