@@ -6,15 +6,18 @@ comments: true
 
 Recently I came by the [House Robber III
 problem](https://leetcode.com/problems/house-robber-iii/) in LeetCode. The
-basic idea is you're given a binary tree with weights on its vertices and asked
-to find an [independent
+basic idea in this problem is you're given a binary tree with weights on its
+vertices and asked to find an [independent
 set](https://en.wikipedia.org/wiki/Independent_set_(graph_theory)) that
-maximizes the sum of the weights of its vertices. This is a dynamic programming
-problem rated medium in difficulty by the website.
+maximizes the sum of its weights. This is a dynamic programming problem rated
+medium in difficulty by the website.
 
 This post starts with a brief overview on dynamic programming, and ends with an
 anecdote on how I tried two different implementations of dynamic programming
-memoization when trying to solve the House Robber III problem.
+memoization when solving the House Robber III problem. Although the actual
+algorithmic idea in both approaches is the same, the strategy used to store
+memozation matrices when entries are the nodes of a tree led to considerable
+differences in readability.
 
 <span class="more"/>
 
@@ -25,22 +28,23 @@ an algorithm design technique in which a problem is solved by combining *stored
 solutions* of smaller subproblems. The idea is that by storing solutions to
 smaller problems and systematically referring to them later you can search
 through all *possible* solutions without having to repeat computations. In this
-sense there commonly, though not necessarily, exists a time-space tradeoff when
-implementing a dynamic programming algorithm. You achieve a gain in time by
-referring to precomputed solutions and not repeating yourself, while paying
-with more space to store said solutions.
+sense there commonly exists -- although not necessarily -- a time-space
+tradeoff when implementing a dynamic programming algorithm. A gain in time can
+be achieved by referring to precomputed solutions instead of repeating
+yourself, while paying with more space to store said solutions.
 
 > For more explanation about dynamic programming and other algorithm design
 > techniques I recommend the book [The Algorithm Design
 > Manual](http://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1849967202)
-> by Prof. Steven Skiena.
+> by Prof. Steven S. Skiena.
 
 The simplest example of the technique, though it isn't always framed as a
 dynamic programming problem, is probably the problem of finding the $n$-th
 member of the [*Fibonacci
 sequence*](https://en.wikipedia.org/wiki/Fibonacci_number) defined by $F_n =
-F_{n-1} + F_{n-2}$, with $F_0 = 0$ and $F_1 = 1$. The traditional naive
-recursive solution in C++ is
+F_{n-1} + F_{n-2}$, with $F_0 = 0$ and $F_1 = 1$. The definition of this
+problem itself can already be used as a dynamic programming memoization matrix.
+The traditional naive recursive solution in C++ is
 
 {% highlight c++ lineno %}
 int fibonacci(int n) {
@@ -49,8 +53,8 @@ int fibonacci(int n) {
 }
 {% endhighlight %}
 
-This is a solution makes two new recursive function calls in every iteration,
-with a call tree of height $n$. Such a pattern characterizes a $O(2^n)$
+This solution spawns two new recursive function calls in every iteration,
+generating a call tree of height $n$. Such a pattern characterizes an $O(2^n)$
 complexity algorithm. An exponential algorithm for such a simple problem is
 pretty bad.
 
@@ -71,11 +75,12 @@ $D_k$, corresponds to the $k$-th member of the Fibonacci sequence. Provided
 such an array, it's easy to see we can find the $n$-th member simply by
 computing $D_{n-1} + D_{n-2}$. From the base cases of the problem we know $D_0
 = 0$ and $D_1 = 1$. Now notice how the solution of a subproblem $D_k$ requires
-that the previous subproblems $D_{k-1}$ and $D_{k-2}$ have already been solved. This
-constraint can be satisfied by iteratively finding the subsolutions from $D_2$
-up to $D_{k-1}$. This way whenever we need a previous solution it will have
-already been previously computed and stored in $D$. By the end of this process
-the $n$-th member of the Fibonacci sequence will be stored in $D_k$.
+that the previous subproblems $D_{k-1}$ and $D_{k-2}$ have already been solved.
+This constraint can be satisfied by iteratively finding the subsolutions from
+$D_2$ up to $D_{k-1}$. This way whenever we need a previous solution we can be
+sure it has been computed beforehand and its solution stored in $D$. By the end
+of this process the $n$-th member of the Fibonacci sequence will be stored in
+$D_k$.
 
 {% highlight c++ lineno %}
 int fibonacci(int n) {
@@ -98,9 +103,9 @@ improved to constant space while maintaining $O(n)$ time by realizing that only
 the last two entries of the memoization array are needed to solve a subproblem.
 
 As stated earlier, although the $n$-th member of the Fibonacci sequence is
-among the simplest dynamic programming examples you can find, it serves well
+among the simplest dynamic programming examples one can find, it serves well
 for our purposes here. The discussion above illustrates how the idea of
-systematically storing answers in a *memoization* matrix can help you speed up
+systematically storing answers in a *memoization matrix* can help you speed up
 algorithm execution by solving a problem with table lookups instead of
 recomputation.
 
@@ -181,13 +186,13 @@ tree](/assets/dynamic-programming-02.png)
 
 We see that the base case of the memoization arrays are respected in the leaf
 nodes 3, 4, 6, and 7, where $D_k = w_k$ and $\dbar_k = 0$. Let's focus our
-attention at the subtree rooted at node 2. We know $D_2$ will be $w_2 = 5$ plus
-the solutions of its children that do not contain its children. For the left
-subtree that solution would be $3$, coming from node 7, while from the right
-subtree that would be $0$, since node 6 has no children.The total solution for
-node 2 is $D_2 = 5 + 3 + 0 = 8$. On the other hand $\dbar_2$ is the sum of the
-maximum of the solutions of its children. That means $\dbar_2 = \dbar_5 + D_3$,
-which corresponds to $3 + 3 = 6$.
+attention at the subtree rooted at node 2 for a moment. We know $D_2$ will be
+$w_2 = 5$ plus the solutions of its children that do not contain its children.
+For the left subtree that solution would be $3$, coming from node 7, while from
+the right subtree that would be $0$, since node 6 has no children.The total
+solution for node 2 is $D_2 = 5 + 3 + 0 = 8$. On the other hand $\dbar_2$ is
+the sum of the maximum of the solutions of its children. That means $\dbar_2 =
+\dbar_5 + D_3$, which corresponds to $3 + 3 = 6$.
 
 This solution requires us to store two arrays of size $n$ each, corresponding
 to $O(n)$ words of extra memory space. Computing one entry of the arrays is
@@ -223,28 +228,30 @@ programming way we will need to:
   arrays can be allocated. The tree structure provides no resort for us to know
 its size, so this requires a full tree traversal.
 * Create a mapping of tree nodes to integers in the interval $[0, n)$, so we
-  know to which entry of the memoization arrays correspond to a given node.
-This can be done along the traversal in the previous requirement by numbering
-nodes in order of discovery.
+  know which entry of the memoization arrays correspond to a given node.  This
+can be done along the traversal in the previous requirement by numbering nodes
+in order of discovery.
+
 
 Only after these two steps are done we would be able to compute the memoization
 arrays systematically and solve the problem. This was my first approach for
-solving the problem, I went on to implement it, and it did work. But all along
-the way I felt like there was more going on that was actually necessary. In
-case you're interested this first implementation can be found in [this
+solving the problem. Though I went on to implement this approach, and it did
+work, all along the way I felt like there was more going on with my program
+than was actually necessary. In case you're interested this first
+implementation can be found in [this
 gist](https://gist.github.com/anonymous/d609fa7e1d692c48d755a7790b1795bf).
 
-My problem, and the reason I decided to write this post, was that the tree on a
-pointer implementation does not have a good synergy with the traditional
-dinamic programming memoization based on arrays. With some thought and
-intuition I quickly realized that the algorithm scheme showed in the previous
-section could be improved.
+My problem, and the reason I decided to write this post, was that **trees on a
+pointer implementation tend not to work well with the traditional dinamic
+programming memoization based on arrays**. With some thought and intuition I
+quickly realized that the algorithm scheme showed in the previous section could
+be improved.
 
 ![memoization on trees](/assets/dynamic-programming-03.png)
-<p class="caption">Improved memoization by storing subsolutions in a paylaod.
+<p class="caption">Improved memoization by storing subsolutions in a payload.
 The number above a node is its $D_k$, while $\dbar_k$ is the number below.</p>
 
-Essentialy this is the same scheme as the one from last section, except that
+Essentially this is the same scheme as the one from last section, except that
 here the information from the memoization arrays $D$ and $\dbar$ is stored in
 the tree alongside the node it corresponds to. The final implementation of the
 improved scheme is shown below.
