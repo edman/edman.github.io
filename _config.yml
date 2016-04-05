@@ -29,7 +29,9 @@ paginate_path: 'page/:num'
 # 'read more' delimiter
 excerpt_separator: '<span class="more"/>'
 
-exclude: additionals
+show_drafts: true
+
+exclude: [additionals]
 
 # Gems
 gems:
