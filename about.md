@@ -5,7 +5,7 @@ permalink: '/about'
 ---
 
 > It's in the doing that our being arises. Intact, ready to go, energized by
-> the spirit of risk. Succed or fail doesn't matter. Just do. Then rejoice in
+> the spirit of risk. Succeed or fail doesn't matter. Just do. Then rejoice in
 > the doing.
 
 ![About me](/assets/about-me.jpg)
@@ -28,9 +28,9 @@ released service [Syrup
 Order](https://play.google.com/store/apps/details?id=com.skplanet.mbuzzer)
 using `node.js`. The service was quite new back then, so it was an exciting
 time to board the team. My role in development mainly revolved around
-optimization and improvements in service reliability, although I did contribute
-with a participation client-side by extending support for product management
-with `html5`, `css3` and `AngularJS`.
+optimization of complex mapping modules and improvements in service
+reliability, although I did contribute with a participation client-side by
+extending support for product management with `html5`, `css3` and `AngularJS`.
 
 ![About UFS](/assets/about-ufs.jpg)
 <p class="caption">Last one out turn off the lights</p>
@@ -53,7 +53,7 @@ satellite under the supervision of doctor [W.A.
 Santos](https://br.linkedin.com/in/walterabrahao).
 
 ![About SBU](/assets/about-sbu.jpg)
-<p class="caption">Just Wolfie chilling by the school fountain, no big deal</p>
+<p class="caption">Just Wolfie chilling by the school fountain</p>
 
 In my junior year in undergrad I went to the [State University of New York at
 Stony Brook](http://www.stonybrook.edu) (SBU) on an exchange program. During my
@@ -63,10 +63,11 @@ attaining a perfect 4.0 GPA on the spring semester of 2012.
 ![About something else](/assets/about-others.jpg)
 <p class="caption">Proud finisher of a half marathon</p>
 
-Besides computers I am interested in photography and sports. I ran a
+Besides computers I have great interest in photography and sports. I ran a
 half-marathon on fall 2015 and intend to complete a full marathon in the next
-year or so. I am a fluent English speaker, native in Portuguese, and can speak
-Korean well enough for casual settings.
+year or so. The perfect Sunday afternoon plan is gathering a group of friends
+over for a backyard barbecue and beer. I am a fluent English speaker, native in
+Portuguese, and can speak Korean well enough for casual settings.
 
 Thanks for reading. If you like my website, make sure to get in contact for
 comments or suggestions. Find me on [github](http://github.com/edman),
