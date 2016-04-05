@@ -23,7 +23,7 @@ facebook_username: 'edman.anjos'
 permalink: '/:title'
 
 # number of posts to be showed on the front page
-paginate: 2
+paginate: 4
 # format of pagination pages
 paginate_path: 'page/:num'
 # 'read more' delimiter

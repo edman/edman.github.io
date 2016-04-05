@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Dynamic Programming Memoization with Trees
-comments: True
-published: False
+comments: true
+draft: true
 ---
 
 Recently I came by the [House Robber III
