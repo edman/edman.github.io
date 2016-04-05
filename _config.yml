@@ -29,6 +29,8 @@ paginate_path: 'page/:num'
 # 'read more' delimiter
 excerpt_separator: '<span class="more"/>'
 
+exclude: additionals
+
 # Gems
 gems:
   - jekyll-paginate
