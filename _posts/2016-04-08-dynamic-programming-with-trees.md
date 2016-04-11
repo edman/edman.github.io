@@ -133,8 +133,9 @@ have two arrays $D$ and $\dbar$, each of size $n$, where the $k$-th entry of
 $D$ ($\dbar$), denoted $D_k$ ($\dbar_k$), corresponds to **the total weight of
 the maximum-weight independet set of the subtree rooted at the $k$-th node that
 _includes_ (_excludes_) the $k$-th node**. After the arrays $D$ and $\dbar$
-have been entirely computed the answer of the problem will be the maximum among
-$D_r$ and $\dbar_r$, where $r$ is the node that represent the root of the tree.
+have been entirely computed, the answer of the problem will correspond to the
+maximum among $D_r$ and $\dbar_r$, where $r$ is the node that represent the
+root of the tree.
 
 The *base case* of this dynamic programming solution are the leaves of the
 tree.  Given a leaf node $l$ we have that $D_l = w_l$ and $\dbar_l = 0$, where
@@ -232,34 +233,45 @@ its size, so this requires a full tree traversal.
 can be done along the traversal in the previous requirement by numbering nodes
 in order of discovery.
 
-
 Only after these two steps are done we would be able to compute the memoization
-arrays systematically and solve the problem. This was my first approach for
-solving the problem. Though I went on to implement this approach, and it did
-work, all along the way I felt like there was more going on with my program
-than was actually necessary. In case you're interested this first
-implementation can be found in [this
+arrays systematically up to the tree root and solve the problem. This was my
+first strategy when designing an algorithm. Each of the additional steps
+require $O(n)$ time, which won't increase the overall complexity of the
+solution. Though I went on to implement this approach, and it did work, all
+along the way I felt like there was more going on with my program than was
+actually necessary. In case you're interested this first implementation can be
+found in [this
 gist](https://gist.github.com/anonymous/d609fa7e1d692c48d755a7790b1795bf).
 
 My problem, and the reason I decided to write this post, was that **trees on a
 pointer implementation tend not to work well with the traditional dinamic
-programming memoization based on arrays**. With some thought and intuition I
+programming memoization based on arrays**. How can we make this less complex?
+Or, do we absolutely need arrays at all? With some thought and intuition I
 quickly realized that the algorithm scheme showed in the previous section could
-be improved.
+be improved by making use of the tree structure as the memoization matrix
+storage. This way memoization matrix access is done implicitly, as opposed to
+an explicit array.
 
 ![memoization on trees](/assets/dynamic-programming-03.png)
 <p class="caption">Improved memoization by storing subsolutions in a payload.
 The number above a node is its $D_k$, while $\dbar_k$ is the number below.</p>
 
-Essentially this is the same scheme as the one from last section, except that
-here the information from the memoization arrays $D$ and $\dbar$ is stored in
-the tree alongside the node it corresponds to. The final implementation of the
-improved scheme is shown below.
+Essentially the concept of the solution algorithm here is the same scheme as
+the one from last section, except that now the information from the
+memoization arrays $D$ and $\dbar$ is stored in the tree alongside the node it
+corresponds to. The final implementation of the improved scheme is shown below.
 
 <script src="https://gist.github.com/edman/b903e06e3362abe1e7df201f1468aaf2.js"></script>
 
-Now there are no arrays to be allocated and neither must we map nodes to
-integers, so actual computation related to the problem solution can begin right
-away. This leads to a more elegant, more readable solution in half the number
-of lines.
+In this implementation neither there are arrays to be allocated, nor must we
+create a mapping of nodes to integers. By storing memoization as a payload
+alongside tree nodes, actual computation related to the problem solution can
+begin right away. Besides, this led to a more elegant, and more readable
+solution in half the number of lines.
+
+From now on I will keep in mind that the concept of dynamic programming
+memoization matrices don't necessarily have to be implemented as actual
+*matrices*. Characteristics of the underlying data structure being applied at
+the problem in hand can be leveraged to represent the whiteboard abstractions
+drafted when designing an algorithm.
 
